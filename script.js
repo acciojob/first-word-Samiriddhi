@@ -1,12 +1,19 @@
 function firstWord(s) {
-  // Trim any leading/trailing spaces
-  s = s.trim();
+  // Handle empty string directly
+  if (s.length === 0) {
+    return '';
+  }
   
-  // Split the string by space and return the first part
-  let arr = s.split(" ");
+  // Find the index of the first space
+  let firstSpaceIndex = s.indexOf(' ');
   
-  // Return the first word or the entire string
-  return arr[0];
+  // If there is no space, return the entire string
+  if (firstSpaceIndex === -1) {
+    return s;
+  }
+  
+  // Otherwise, return the substring from the start up to the first space
+  return s.slice(0, firstSpaceIndex);
 }
 
 Do not change the code below
