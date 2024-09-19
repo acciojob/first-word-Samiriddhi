@@ -4,13 +4,9 @@ function firstWord(s) {
     return '';
   }
   
-  // Find the index of the first space
-  let firstSpaceIndex = s.indexOf(' ');
-  
-  // If there is no space, return the entire string
-  if (firstSpaceIndex === -1) {
-    return s;
-  }
+  s.trim(" ")
+	let arr =s.split(" ");
+	return arr[0].toString();
   
   // Otherwise, return the substring from the start up to the first space
   return s.slice(0, firstSpaceIndex);
